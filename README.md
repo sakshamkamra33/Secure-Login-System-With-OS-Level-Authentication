@@ -10,65 +10,47 @@ The program demonstrates essential concepts in system programming, file handling
 
 🧾 1. User Registration
 
-Users can create an account by entering a unique username and a strong password.
-
-Passwords are validated for:
-
-Minimum 8 characters
-
-At least one uppercase letter
-
-At least one lowercase letter
-
-At least one number
-
-At least one special character
-
-For added security:
-
-A random salt (16 characters) is generated.
-
-The password + salt combination is hashed using SHA-256.
-
-Username, salt, and hashed password are stored in users.txt.
+-> Users can create an account by entering a unique username and a strong password.
+-> Passwords are validated for:
+   -> Minimum 8 characters
+   -> At least one uppercase letter
+   -> At least one lowercase letter
+   -> At least one number
+   -> At least one special character
+-> For added security:
+   -> A random salt (16 characters) is generated.
+   -> The password + salt combination is hashed using SHA-256.
+   -> Username, salt, and hashed password are stored in users.txt.
 
 🔐 2. User Login
 
-Users can log in using their username and password.
-
-The program reads the stored hash and salt, rehashes the entered password, and compares the results.
-
-Supports up to 3 login attempts before locking out.
-
-All login attempts (success or failure) are logged with timestamps in login_attempts.txt.
+-> Users can log in using their username and password.
+-> The program reads the stored hash and salt, rehashes the entered password, and compares the results.
+-> Supports up to 3 login attempts before locking out.
+-> All login attempts (success or failure) are logged with timestamps in login_attempts.txt.
 
 🧠 3. Secure Password Handling
 
-Passwords are never stored in plain text.
-
-SHA-256 hashing from OpenSSL ensures cryptographic security.
-
-Random salt generation prevents dictionary and rainbow table attacks.
+-> Passwords are never stored in plain text.
+-> SHA-256 hashing from OpenSSL ensures cryptographic security.
+-> vRandom salt generation prevents dictionary and rainbow table attacks.
 
 🧩 4. Background Process (Optional)
 
-Users can choose to run the login process in the background.
-
-Implemented using UNIX fork() and wait() system calls.
-
-If the user selects background mode, the parent process continues execution while the child process handles login authentication.
+-> Users can choose to run the login process in the background.
+-> Implemented using UNIX fork() and wait() system calls.
+-> If the user selects background mode, the parent process continues execution while the child process handles login authentication.
 
 🧾 5. Logging System
 
-Every login attempt (success or failure) is recorded in a file login_attempts.txt with:
+-> Every login attempt (success or failure) is recorded in a file login_attempts.txt with:
+   -> Timestamp
+   -> Username
+   -> Attempt status (SUCCESS / FAIL)
 
-Timestamp
-
-Username
-
-Attempt status (SUCCESS / FAIL)
 
 📁 File Structure
+
 📦 Secure-Login-System
 ├── users.txt               # Stores username, salt, and hashed password
 ├── login_attempts.txt      # Records all login activities
@@ -78,24 +60,17 @@ Attempt status (SUCCESS / FAIL)
 🧰 Dependencies
 
 This program uses:
-
-OpenSSL library for SHA-256 hashing
-
-Standard C Libraries:
-
-<stdio.h>, <string.h>, <stdlib.h>, <unistd.h>, <time.h>, <ctype.h>
-
-<sys/types.h>, <sys/wait.h>, <openssl/sha.h>
+-> OpenSSL library for SHA-256 hashing
+-> Standard C Libraries:
+       -> <stdio.h>, <string.h>, <stdlib.h>, <unistd.h>, <time.h>, <ctype.h>
+       -> <sys/types.h>, <sys/wait.h>, <openssl/sha.h>
 
 🛠️ Installation of OpenSSL (if not installed)
 
 For Linux / macOS:
-
 sudo apt install libssl-dev
 
-
 For Windows (MinGW / MSYS2):
-
 pacman -S mingw-w64-x86_64-openssl
 
 🖥️ Compilation & Execution
