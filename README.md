@@ -102,6 +102,7 @@ pacman -S mingw-w64-x86_64-openssl
 ```
 
 🖥️ Compilation & Execution
+
 Compile
 ```
 gcc main.c -o secure_login -lcrypto
@@ -118,3 +119,12 @@ Run
 - Enter strong password
 - User registered successfully
 ---
+Login
+- Choose option 2
+- Select background mode (1/0)
+- Enter credentials
+
+Output:
+
+- ✅ Login successful
+- ❌ Login failed (max 3 attempts)
