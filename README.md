@@ -147,3 +147,31 @@ Choice: 2
 - Enter username: saksham
 - Enter password: Pass@123
 - Login successful!
+
+---
+🧱 Core Concepts
+- File Handling
+- SHA-256 Hashing
+- Salt Generation
+- Process Management (fork, wait)
+- Input Validation
+- Logging System
+---
+⚖️ Security Notes
+- Passwords are never stored in plain text
+- Salted hashing prevents offline attacks
+- Strong password policy enforced
+- Max 3 login attempts
+---
+🚀 Future Improvements
+- Password reset feature
+- User deletion
+- File encryption
+- Account lockout timer
+- Multi-threading
+- Admin dashboard
+---
+👨‍💻 Author
+
+- Saksham Kamra
+- College Student | System Programmer | Security Enthusiast
