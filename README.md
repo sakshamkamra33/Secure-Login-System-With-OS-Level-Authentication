@@ -128,3 +128,22 @@ Output:
 
 - ✅ Login successful
 - ❌ Login failed (max 3 attempts)
+---
+Exit
+- Choose option 3
+---
+📄 Example Output
+1. Register
+2. Login
+3. Exit
+
+Choice: 1
+Enter username: saksham
+Enter password: Pass@123
+User registered successfully!
+
+Choice: 2
+Run login in background? (1 = yes, 0 = no): 0
+Enter username: saksham
+Enter password: Pass@123
+Login successful!
