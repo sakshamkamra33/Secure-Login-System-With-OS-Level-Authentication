@@ -138,12 +138,12 @@ Exit
 3. Exit
 
 Choice: 1
-Enter username: saksham
-Enter password: Pass@123
-User registered successfully!
+- Enter username: saksham
+- Enter password: Pass@123
+- User registered successfully!
 
 Choice: 2
-Run login in background? (1 = yes, 0 = no): 0
-Enter username: saksham
-Enter password: Pass@123
-Login successful!
+- Run login in background? (1 = yes, 0 = no): 0
+- Enter username: saksham
+- Enter password: Pass@123
+- Login successful!
